@@ -1,9 +1,6 @@
 //
 // Created by wou on 21/12/22.
 //
-//
-// Created by wou on 21/12/22.
-//
 
 #include <iostream>
 #include <vector>
