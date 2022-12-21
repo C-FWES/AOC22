@@ -11,7 +11,10 @@ int main () {
     vector<vector<int>> calories;
     string line;
     vector<int> group;
-    while (getline(cin, line)) {
+    while (getline(cin,line)) {
+        if (line == "bruh") {
+            break;
+        }
         if (line.empty()) {
             calories.push_back(group);
             group.clear();
