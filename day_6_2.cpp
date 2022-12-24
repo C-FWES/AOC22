@@ -19,21 +19,18 @@ int main () {
 
     int characterNum = 0;
 
-    set<char> seen;
 
     for (int i = 0; i < input.length() - 14; ++i) {
-        int count = 0;
-        string currSection = input.substr(i, 14);
-        for (int k = 0; k < currSection.length(); ++k) {
-            if (seen.count(currSection[k])) {
+        set<char> seen;
+        for (int k = i; k < i + 14; ++k) {
+            if (seen.count(input[k])) {
                 break;
             }
-            seen.insert(currSection[k]);
-            ++count;
+            seen.insert(input[k]);
+
         }
-        seen.clear();
-        if (count == currSection.length()) {
-            characterNum = int(i + currSection.length()); break;}
+        if (seen.size() == 14) {
+            characterNum = int(i + 14); break;}
     }
 
     cout << characterNum;
